@@ -53,7 +53,7 @@ def predict():
     model_result = client.deployments.score( ai_parms["model_endpoint_url"], model_payload )
     data = model_result
 
-    classes = ['LEAO', 'GIRAFA', 'ELEFANTE']
+    classes = ['ELEFANTE', 'GIRAFA', 'LEAO']
     index = data['values'][0][0].index(max(data['values'][0][0]))
     print(data)
 
