@@ -1,0 +1,12 @@
+<div class="square">
+    <form #form=ngForm (ngSubmit)="onSubmit(form)" class="theForm" [formGroup]="sky">
+        <p class="text-center">
+            <label for="inputImg">
+                <span class="glyphicon glyphicon-open"></span>
+                <input ngModel type="file" name="img" id="inputImg" accept="image/png, image/jpeg" class="input-file" formControlName="f" (change)="loadFile($event)"/>
+            </label>
+        </p>
+        <button type="submit" style="align-self: center" class="btn btn-default" [disabled]="!form.form.controls.f.value">OK</button>
+        <button type="reset" style="align-self: center" class="btn btn-default" (click)="ResetForm">Reset</button>
+    </form>
+</div>
