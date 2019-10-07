@@ -22,6 +22,7 @@ export class InputSquareComponent implements OnInit {
   }
 
   ResetForm() {
+    this.result.emit({classe:{data: ''}});
     this.sky.reset()
   }
 
@@ -36,6 +37,7 @@ export class InputSquareComponent implements OnInit {
   }
 
   onSubmit(event) {
+    this.result.emit({classe:{data: ''}});
     this.sendImg.analyzeImge(this.sky.get('f').value)
       .then((data:any) => {
         console.log(data);

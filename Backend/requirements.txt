@@ -2,3 +2,4 @@ Flask
 pillow
 numpy
 watson-machine-learning-client
+sklearn

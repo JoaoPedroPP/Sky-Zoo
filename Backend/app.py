@@ -7,7 +7,7 @@ import numpy as np
 import io
 from PIL import Image
 
-app = Flask(__name__, static_folder="public")
+app = Flask(__name__, static_folder="./public", static_url_path='')
 app.config.from_object(__name__)
 port = int(os.getenv('PORT', 8080))
 
@@ -30,6 +30,7 @@ def hello():
     error=None
     # return render_template('index.html', error=error)
     return send_from_directory('public', 'index.html')
+    # return make_response(open('./public/index.html').read())
 
 def prepare_image(image):
     image = image.resize(size=(96,96))
@@ -47,7 +48,7 @@ def predict():
 
     # Faça uma requisição para o serviço Watson Machine Learning aqui e retorne a classe detectada na variável 'resposta'
     client = WatsonMachineLearningAPIClient(wml_credentials)
-    ai_parms = { "wml_credentials" : wml_credentials, "model_endpoint_url" : "https://us-south.ml.cloud.ibm.com/v3/wml_instances/a8f286bb-6e41-4ddf-a97b-340ffcd6d33e/deployments/9e4bd912-267b-4b5b-9771-53b8ef740d99/online" }
+    ai_parms = { "wml_credentials" : wml_credentials, "model_endpoint_url" : "https://us-south.ml.cloud.ibm.com/v3/wml_instances/a8f286bb-6e41-4ddf-a97b-340ffcd6d33e/deployments/aab63322-d564-477b-b8ea-731a139bd547/online" }
     model_payload = { "values" : image }
     model_result = client.deployments.score( ai_parms["model_endpoint_url"], model_payload )
     data = model_result
