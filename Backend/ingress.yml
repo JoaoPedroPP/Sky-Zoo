@@ -1,0 +1,19 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: skyzoo-ingress
+spec:
+  rules:
+  - host: joaopedropp.com.br
+    http:
+      paths:
+      - backend:
+          serviceName: skyzoo-service
+          servicePort: 80
+  - host: www.joaopedropp.com.br
+    http:
+      paths:
+      - backend:
+          serviceName: skyzoo-service
+          servicePort: 80

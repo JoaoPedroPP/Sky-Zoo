@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: skyzoo
+spec:
+  selector:
+    matchLabels:
+      app: skyzoo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: skyzoo
+    spec:
+      containers:
+      - name: skyzoo
+        image: joaopedropp/skyzoo
+        ports:
+        - containerPort: 8080

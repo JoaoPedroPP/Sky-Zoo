@@ -1,5 +1,5 @@
 Flask
-pillow
+Pillow
 numpy
 watson-machine-learning-client
-sklearn
+scikit-learn

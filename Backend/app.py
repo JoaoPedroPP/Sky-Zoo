@@ -1,6 +1,6 @@
 from watson_machine_learning_client import WatsonMachineLearningAPIClient
 from flask import Flask, render_template, request, json, jsonify, send_from_directory
-from flask_cors import CORS
+# from flask_cors import CORS
 import os
 import json
 import numpy as np
@@ -11,7 +11,7 @@ app = Flask(__name__, static_folder="./public", static_url_path='')
 app.config.from_object(__name__)
 port = int(os.getenv('PORT', 8080))
 
-CORS(app)
+# CORS(app)
 
 wml_credentials = {
   "apikey": "p5INbMkXdfG-qLYDVnk_ROeX6CGnO4ZjWvCRe8Aqd0FJ",
@@ -63,4 +63,4 @@ def predict():
     return resposta
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=port, debug=False)
