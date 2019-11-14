@@ -1,27 +1,11 @@
-# Zoo
+# Sky-Zoo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+This code pattern seeks to demostrate how easy is to create a deep learning model in IBM Watson Studio and export it to Watson Machine Learning Service(WML), making the model acessible though an API request. This pattern also provides a web application that receive an image as input, prepare and send it to to the model hosted on WML, once the models the returns a prediction of the image the app displays the calssification of the input.
 
-## Development server
+Image classification has long been a challenge for Artificial inteligence(A.I). Identify animals in an image can be a funny way to prove concepts related to classification problems and extractation of correct features from an image. And also provides a nice first step to dive in A.I world.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+At the end of this Code Pattern the reader will be able to understand hot to:
+* Use Jupyter Notebooks in Watson Studio;
+* Train, test and deploy a deeplearning model;
+* Interact with IBM Cloud Obejct Storage to store the dataset;
+* Use a Cloud Foudry application to create a web app to consume the model in  WML.
