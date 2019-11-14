@@ -9,3 +9,14 @@ At the end of this Code Pattern the reader will be able to understand hot to:
 * Train, test and deploy a deeplearning model;
 * Interact with IBM Cloud Obejct Storage to store the dataset;
 * Use a Cloud Foudry application to create a web app to consume the model in  WML.
+
+## Flow
+
+1. Get the images to compse the dataset, it is strongly recommended to use this python library [google-images-download](https://github.com/hardikvasa/google-images-download). In the repository there is a section explaining how to use.
+1. Create a Watson Studio project.
+2. Assign a Cloud object storage to it.
+3. Upload the dataset to IBM Cloud Object Storage
+4. Run the jupyter notebook
+5. Deploy the web app
+6. Use the 
+
