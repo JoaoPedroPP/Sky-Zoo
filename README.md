@@ -20,3 +20,16 @@ At the end of this Code Pattern the reader will be able to understand hot to:
 5. Deploy the web app
 6. Use the 
 
+## Steps
+
+1. [Create a new project in Watson Studio](#1-create-a-new-project-in-Watson-studio)
+2. [Upload the dataset to IBM Cloud Object Storage](#2-upload-the-dataset-to-IBM-Cloud-Object-Storage)
+3. [Create the model and deploy it with jupyter notebook](#3-create-the-model-and-deploy-it-with-jupyter-notebook)
+4. [Deploy the web app as a Cloud Foundry application](#4-deploy-the-web-app-as-a-cloud-foundry-application)
+5. [Testing it!](#5-testing-it!)
+
+### 1. Create a Watson Studio project.
+### 2. Upload the dataset to IBM Cloud Object Storage
+### 3. Create the model and deploy it with jupyter notebook
+### 4. Deploy the web app as a Cloud Foundry application
+### 5. Testing it!
